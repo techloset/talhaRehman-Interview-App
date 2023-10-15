@@ -4,8 +4,10 @@ import Logo from '../../assets/images/logo.svg'
 import Yellow from '../../assets/images/YellowBackground.png'
 import Tabel from '../../assets/images/TalkingTabel.svg'
 import BottomYellow from '../../assets/images/BottomYellow.png'
+import { useNavigation } from '@react-navigation/native'
 
-const OnBoarding = ({ navigation }) => {
+const OnBoarding = () => {
+   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <View >
@@ -27,7 +29,7 @@ const OnBoarding = ({ navigation }) => {
               the industry's standard dummy text ever since</Text>
           </View>
           <View style={{marginTop:21, alignItems:"center",paddingBottom:30}}>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Navigation')}>
               <Text style={styles.buttonText}>GET STARTED</Text>
             </TouchableOpacity>
           </View>

@@ -5,6 +5,7 @@ import Home from './src/screens/home/Home';
 import OnBoarding from './src/screens/onBoarding/OnBoarding';
 import Analytics from './src/screens/analytics/Analytics';
 import Articles from './src/screens/articles/Articles';
+import Navigation from './src/navigation/Navigation';
 
 
 
@@ -14,7 +15,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>
         <Stack.Screen name="OnBoarding" component={OnBoarding} />
-        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Navigation" component={Navigation} />
         <Stack.Screen name="Analytics" component={Analytics} />
         <Stack.Screen name="Articles" component={Articles} />
       </Stack.Navigator>
