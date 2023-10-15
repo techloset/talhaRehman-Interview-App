@@ -5,8 +5,11 @@ import Label2 from "../assets/images/YellowLabel2.svg"
 import Label3 from "../assets/images/YellowLabel3.svg"
 import Label4 from "../assets/images/YellowLabel4.svg"
 import Label5 from "../assets/images/YellowLabel5.svg"
+import Label6 from "../assets/images/YellowLabel6.svg"
+import Label7 from "../assets/images/YellowLabel7.svg"
+import Label8 from "../assets/images/YellowLabel8.svg"
 
-const InterviewStart = () => {
+const InterviewStart = ({navigation}) => {
     return (
         <View style={{ borderRadius: 5, marginHorizontal: 20, marginTop: 18, backgroundColor: "#FFFFFF", justifyContent: "center", height: 250, alignItems: "center" }}>
             <Label1 style={styles.label1}/>
@@ -14,11 +17,14 @@ const InterviewStart = () => {
             <Label3 style={styles.label3}/>
             <Label4 style={styles.label4}/>
             <Label5 style={styles.label5}/>
+            <Label6 style={styles.label6}/>
+            <Label7 style={styles.label7}/>
+            <Label8 style={styles.label8}/>
             <Text style={styles.first}>Try Your First Interview
                 for free</Text>
                 <View style={{marginTop:29}}>
-                    <TouchableOpacity style={styles.button}>
-                        <Text style={styles.buttonText}>START</Text>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Analytics')}>
+                        <Text style={styles.buttonText} >START</Text>
                     </TouchableOpacity>
                 </View>
         </View>
@@ -74,5 +80,20 @@ const styles = StyleSheet.create({
         position:"absolute",
         top:136,
         left:162,
+      },
+      label6:{
+        position:"absolute",
+        top:120,
+        left:306,
+      },
+      label7:{
+        position:"absolute",
+        top:190,
+        left:71,
+      },
+      label8:{
+        position:"absolute",
+        top:165,
+        left:257,
       },
 })
