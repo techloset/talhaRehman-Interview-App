@@ -24,6 +24,14 @@ const Home = ({ navigation }) => {
        <View><Text style={styles.last}>Interview by Category</Text></View>
        <View style={{flexDirection:"row",alignItems:"center",gap:3}}><Text style={styles.details}>More</Text><RightArrow/></View>
       </View>
+      <View style={{flexDirection:"row"}}>
+        <View style={{marginLeft:20,marginTop:13,flexDirection:"row"}}>
+        <Text style={styles.cat}></Text>
+        <Text style={styles.cat}></Text>
+        <Text style={styles.cat}></Text>
+        <Text style={styles.cat}></Text>
+        </View>
+      </View>
     </SafeAreaView>
   )
 }
@@ -52,5 +60,11 @@ const styles = StyleSheet.create({
   details:{
     color:"#666775",
     fontSize:14,
+  },
+  cat:{
+    width:100,
+    height:50,
+    marginRight:15,
+    backgroundColor:"white"
   }
 })
