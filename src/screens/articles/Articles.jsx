@@ -5,6 +5,7 @@ import Select from "../../assets/images/Select.svg"
 import Idea from "../../assets/images/Idea.svg"
 import Article from "../../assets/images/Article.svg"
 import Application from "../../assets/images/Application.svg"
+import ArticlesSlider from '../../components/ArticlesSlider'
 
 
 const Articles = ({ navigation }) => {
@@ -35,6 +36,7 @@ const Articles = ({ navigation }) => {
                         <Text style={styles.text2}>Other</Text>
                 </View>
             </View>
+            <ArticlesSlider/>
 
         </SafeAreaView>
     )
