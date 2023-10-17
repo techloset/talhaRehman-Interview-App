@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View,ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Left from "../../assets/images/LeftArrow.svg"
@@ -9,6 +9,7 @@ import Result from '../../components/Result'
 const Analytics = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
+        <ScrollView>
         <View style={{flexDirection:"row", alignItems:"center", marginTop:39, marginLeft:18 }}>
             <Left onPress={() => navigation.navigate('Home')}/>
             <Text style={styles.analytics}>Analytics</Text>
@@ -31,6 +32,7 @@ const Analytics = ({navigation}) => {
         <View>
             <Text style={styles.result}>Summery</Text>
         </View>
+        </ScrollView>
     </SafeAreaView>
   )
 }

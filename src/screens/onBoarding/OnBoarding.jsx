@@ -1,15 +1,18 @@
-import { StyleSheet, Text, View, Button, SafeAreaView, ImageBackground,TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Button, SafeAreaView, ImageBackground,TouchableOpacity, ScrollView,Image } from 'react-native'
 import React from 'react'
 import Logo from '../../assets/images/logo.svg'
 import Yellow from '../../assets/images/YellowBackground.png'
-import Tabel from '../../assets/images/TalkingTabel.svg'
+import Tabel from '../../assets/images/TalkingTabel.png'
 import BottomYellow from '../../assets/images/BottomYellow.png'
 import { useNavigation } from '@react-navigation/native'
+import ratio from '../../style/consts/ratio'
+
 
 const OnBoarding = () => {
    const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
+      <ScrollView>
       <View >
         <ImageBackground source={Yellow} resizeMode='cover' >
           <View style={styles.logo}>
@@ -17,8 +20,8 @@ const OnBoarding = () => {
           </View>
         </ImageBackground>
       </View>
-      <View >
-        <Tabel />
+      <View style={{width:ratio.widthPixel(390),height:ratio.widthPixel(335)}} >
+        <Image source={Tabel}/>
       </View>
       <View>
         <ImageBackground source={BottomYellow} resizeMode='cover'>
@@ -35,6 +38,7 @@ const OnBoarding = () => {
           </View>
         </ImageBackground>
       </View>
+      </ScrollView>
     </SafeAreaView>
   )
 }

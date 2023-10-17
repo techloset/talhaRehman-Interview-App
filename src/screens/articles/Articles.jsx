@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView,ScrollView } from 'react-native'
 import React from 'react'
 import Left from "../../assets/images/LeftArrow.svg"
 import Select from "../../assets/images/Select.svg"
@@ -6,11 +6,14 @@ import Idea from "../../assets/images/Idea.svg"
 import Article from "../../assets/images/Article.svg"
 import Application from "../../assets/images/Application.svg"
 import ArticlesSlider from '../../components/ArticlesSlider'
+// import {height,width} = 
+import ratio from '../../style/consts/ratio'
 
 
 const Articles = ({ navigation }) => {
     return (
         <SafeAreaView>
+            <ScrollView>
             <View style={{flexDirection:"row", alignItems:"center", marginTop:34, marginLeft:18 }}>
                 <Left onPress={() => navigation.navigate('Home')} />
                 <Text style={styles.articles}>Articles</Text>
@@ -37,7 +40,7 @@ const Articles = ({ navigation }) => {
                 </View>
             </View>
             <ArticlesSlider/>
-
+            </ScrollView>
         </SafeAreaView>
     )
 }

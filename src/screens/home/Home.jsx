@@ -1,11 +1,13 @@
-import { StyleSheet, Text, View, Button, SafeAreaView } from 'react-native'
+import { StyleSheet, Text, View, Button, SafeAreaView,ScrollView } from 'react-native'
 import React from 'react'
 import RightArrow from '../../assets/images/rightArrow.svg'
 import InterviewStart from '../../components/InterviewStart'
 import Interview from '../../components/Interview'
+import ratio from '../../style/consts/ratio'
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView>
+      <ScrollView>
       <View style={{flexDirection:"row",justifyContent:"space-between",marginHorizontal:20, marginTop:35}}>
         <View><Text style={styles.dashboard}>Dashboard</Text></View>
         <View><Text style={styles.tem}>30 C</Text></View>
@@ -32,7 +34,9 @@ const Home = ({ navigation }) => {
         <Text style={styles.cat}></Text>
         </View>
       </View>
+      </ScrollView>
     </SafeAreaView>
+  
   )
 }
 
@@ -62,8 +66,8 @@ const styles = StyleSheet.create({
     fontSize:14,
   },
   cat:{
-    width:100,
-    height:50,
+    width:ratio.widthPixel(100),
+    height:ratio.widthPixel(50),
     marginRight:15,
     backgroundColor:"white"
   }
