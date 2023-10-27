@@ -64,7 +64,8 @@ const styles = StyleSheet.create({
         fontSize:13,
         fontFamily:"Poppins-Regular",
         marginLeft:21,
-        width:"86%"
+        width:"86%",
+        lineHeight:22,
     },
     frame:{
         position:"relative",
@@ -82,6 +83,7 @@ const styles = StyleSheet.create({
     PaginationPic:{
         marginTop:37,
         margin:"auto",
-        alignSelf:"center"
+        alignSelf:"center",
+        marginBottom:25
     }
 })

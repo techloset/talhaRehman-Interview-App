@@ -6,8 +6,8 @@ import Idea from "../../assets/images/Idea.svg"
 import Article from "../../assets/images/Article.svg"
 import Application from "../../assets/images/Application.svg"
 import ArticlesSlider from '../../components/ArticlesSlider'
-// import {height,width} = 
 import ratio from '../../style/consts/ratio'
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 
 const Articles = ({ navigation }) => {
@@ -52,13 +52,13 @@ const styles = StyleSheet.create({
         color:"#013551",
         fontSize:22,
         fontFamily:"Poppins-SemiBold",
-        marginLeft:11
+        marginLeft:pixelSizeVertical(11)
     },
     articlesPage:{
         color:"#47515C",
         fontSize:14,
         fontFamily:"Poppins-Medium",
-        marginLeft:28
+        marginLeft:pixelSizeVertical(28)
     },
     main:{
         flexDirection:"row",
@@ -66,11 +66,11 @@ const styles = StyleSheet.create({
         flexWrap:"wrap",
         backgroundColor:"#FFF2EB",
         marginTop:14,
-        gap:66
+        gap:pixelSizeVertical(66)
     },
     topRow:{
         alignItems:"center",
-        marginLeft:37,
+        marginLeft:pixelSizeVertical(37),
         marginTop:55
     },
     text1:{
@@ -89,6 +89,6 @@ const styles = StyleSheet.create({
     },
     topRow1:{
         alignItems:"center",
-        marginTop:55
+        marginTop:55,
     }
 })

@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Button, SafeAreaView, ImageBackground,TouchableOpacity, ScrollView,Image } from 'react-native'
+import { StyleSheet, Text, View, Button, SafeAreaView, ImageBackground,TouchableOpacity, ScrollView,Image,StatusBar } from 'react-native'
 import React from 'react'
 import Logo from '../../assets/images/logo.svg'
 import Yellow from '../../assets/images/YellowBackground.png'
@@ -7,73 +7,80 @@ import BottomYellow from '../../assets/images/BottomYellow.png'
 import { useNavigation } from '@react-navigation/native'
 import ratio from '../../style/consts/ratio'
 
+// import { responsiveFontSize,responsiveHeight,responsiveWidth,responsiveScreenHeight,responsiveScreenWidth } from 'react-native-responsive-dimensions'
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const OnBoarding = () => {
    const navigation = useNavigation();
   return (
-    <SafeAreaView style={styles.container}>
-      <ScrollView>
-      <View >
-        <ImageBackground source={Yellow} resizeMode='cover' >
-          <View style={styles.logo}>
-            <Logo />
-          </View>
-        </ImageBackground>
-      </View>
-      <View style={{width:ratio.widthPixel(390),height:ratio.widthPixel(335)}} >
-        <Image source={Tabel}/>
+   <SafeAreaView>
+    <StatusBar hidden/>
+    <ImageBackground source={Yellow} style={styles.bgImg}>
+      <View style={styles.logoContainer}><Logo width={266}/></View>
+      <View style={styles.tableContainer}>
+        <Image style={styles.tableImg} source={Tabel}/>
       </View>
       <View>
-        <ImageBackground source={BottomYellow} resizeMode='cover'>
-
-          <View style={{width:"100%", alignItems:"center"}}>
-            <Text style={styles.text}>Lorem Ipsum is simply dummy text of the printing
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>Lorem Ipsum is simply dummy text of the printing
               and  typesetting industry.  Lorem Ipsum has been
               the industry's standard dummy text ever since</Text>
-          </View>
-          <View style={{marginTop:21, alignItems:"center",paddingBottom:30}}>
+      </View>
+      <View style={{marginTop:pixelSizeVertical(21), alignItems:"center",paddingBottom:30}}>
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Navigation')}>
               <Text style={styles.buttonText}>GET STARTED</Text>
             </TouchableOpacity>
           </View>
-        </ImageBackground>
+
       </View>
-      </ScrollView>
-    </SafeAreaView>
+    </ImageBackground>
+   </SafeAreaView>
   )
 }
 
 export default OnBoarding
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  logo: {
-    alignItems: 'center',
-    marginTop: 60,
-    marginBottom: 140
-  },
-  text:{
-    color:"#3B4A58",
-    fontFamily: 'Poppins-Medium',
-    fontSize:14,
-    alignItems:"center",
-    width:"90%",
-    marginTop:108
-  },
   button:{
-    width:212,
-    height:47,
-    borderRadius:3,
+    width:widthPixel(212),
+    height:widthPixel(47),
+    borderRadius:widthPixel(3),
     backgroundColor:"#F17720",
     justifyContent:"center",
     alignItems:"center"
   },
   buttonText:{
     color:"#FFFFFF",
-    fontSize:14,
+    fontSize:fontPixel(14),
     fontFamily: 'Poppins-SemiBold'
-  }
-
+  },
+  textContainer:{
+    alignItems:"center",
+    marginTop:pixelSizeVertical(100)
+  },
+  text:{
+    color:"#3B4A58",
+    fontFamily: 'Poppins-Medium',
+    fontSize:ratio.fontPixel(14),
+    width:pixelSizeVertical(359),
+  },
+tableContainer:{
+  // justifyContent: 'center',
+  alignItems: 'center',
+  marginTop:pixelSizeVertical(120),
+  width:widthPixel(390),
+  alignSelf:'center'
+  // paddingHorizontal:pixelSizeVertical(150)
+},
+tableImg:{
+  width:'100%',
+},
+logoContainer:{
+  // justifyContent: 'center',
+  alignItems: 'center',
+  marginTop:pixelSizeVertical(50)
+},
+bgImg:{
+  height:widthPixel(896),
+}
 })

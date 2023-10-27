@@ -74,5 +74,6 @@ const styles = StyleSheet.create({
         fontFamily:"Poppins-Medium",
         marginTop:23,
         marginLeft:16,
+        marginBottom:25
     }
 })

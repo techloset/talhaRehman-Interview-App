@@ -8,6 +8,9 @@ import Meeting1 from "../assets/images/Meeting1.svg"
 import Meeting2 from "../assets/images/Meeting2.svg"
 import Meeting3 from "../assets/images/Meeting3.svg"
 import Meeting4 from "../assets/images/Meeting4.svg"
+import ratio from '../style/consts/ratio'
+
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Interview = () => {
   return (
@@ -67,12 +70,12 @@ const styles = StyleSheet.create({
   main: {
     height: 154,
     width: 100,
-    marginRight:20
+    marginRight:pixelSizeVertical(20)
 
   },
   container: {
     flexDirection: "row",
-    marginLeft:19,
+    marginLeft:pixelSizeVertical(19),
   },
   meeting: {
     position: "relative",
@@ -82,24 +85,24 @@ const styles = StyleSheet.create({
   },
   heading: {
     color: "white",
-    fontSize:12,
+    fontSize:fontPixel(12),
     fontFamily:"Poppins-SemiBold",
     left:9
   },
   para:{
-    fontSize:9,
+    fontSize:fontPixel(9),
     fontFamily:"Poppins-Medium",
     lineHeight:12,
     color: "white",
-    left:9,
-    top:7
+    left:pixelSizeVertical(9),
+    top:pixelSizeVertical(7)
 
   },
   time:{
     color: "white",
-    fontSize:16,
+    fontSize:fontPixel(16),
     fontFamily:"Poppins-SemiBold",
-    top:11,
-    left:25
+    top:pixelSizeVertical(11),
+    left:pixelSizeVertical(25)
   }
 })

@@ -4,6 +4,8 @@ import green from "../assets/images/greenProgress.png"
 import blue from "../assets/images/blueProgress.png"
 import orange from "../assets/images/orangeProgress.png"
 import purple from "../assets/images/purpleProgress.png"
+import { responsiveWidth } from 'react-native-responsive-dimensions'
+
 
 const Result = () => {
   return (
@@ -94,7 +96,7 @@ const styles = StyleSheet.create({
         flexWrap:"wrap"
     },
     container:{
-        width:100,
+        width:responsiveWidth(24),
         alignItems:"center"
     },
     green:{

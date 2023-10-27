@@ -8,10 +8,13 @@ import Label5 from "../assets/images/YellowLabel5.svg"
 import Label6 from "../assets/images/YellowLabel6.svg"
 import Label7 from "../assets/images/YellowLabel7.svg"
 import Label8 from "../assets/images/YellowLabel8.svg"
+import ratio from '../style/consts/ratio'
+
+const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const InterviewStart = ({navigation}) => {
     return (
-        <View style={{ borderRadius: 5, marginHorizontal: 20, marginTop: 18, backgroundColor: "#FFFFFF", justifyContent: "center", height: 250, alignItems: "center" }}>
+        <View style={{ borderRadius: 5, marginHorizontal: pixelSizeVertical(20), marginTop: 18, backgroundColor: "#FFFFFF", justifyContent: "center", height: 250, alignItems: "center" }}>
             <Label1 style={styles.label1}/>
             <Label2 style={styles.label2}/>
             <Label3 style={styles.label3}/>
@@ -41,7 +44,7 @@ const styles = StyleSheet.create({
         fontFamily: "Poppins-Medium",
         lineHeight: 24,
         width: "60%",
-        marginTop:24
+        marginTop:pixelSizeVertical(24)
     },
     buttonText:{
         color:"#FFFFFF",
@@ -59,32 +62,32 @@ const styles = StyleSheet.create({
       label1:{
         position:"absolute",
         top:20,
-        left:14,
+        left:pixelSizeVertical(14),
       },
       label2:{
         position:"absolute",
         top:26,
-        left:150,
+        left:pixelSizeVertical(150),
       },
       label3:{
         position:"absolute",
         top:0,
-        left:269,
+        left:pixelSizeVertical(249),
       },
       label4:{
         position:"absolute",
         top:132,
-        left:7,
+        left:pixelSizeVertical(7),
       },
       label5:{
         position:"absolute",
         top:136,
-        left:162,
+        left:pixelSizeVertical(162),
       },
       label6:{
         position:"absolute",
         top:120,
-        left:306,
+        left:pixelSizeVertical(300),
       },
       label7:{
         position:"absolute",
@@ -94,6 +97,6 @@ const styles = StyleSheet.create({
       label8:{
         position:"absolute",
         top:165,
-        left:257,
+        left:pixelSizeVertical(257),
       },
 })
