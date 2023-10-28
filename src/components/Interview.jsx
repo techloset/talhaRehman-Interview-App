@@ -15,7 +15,7 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const Interview = () => {
   return (
 
-    <View style={{marginTop:28}}>
+    <View >
       <ScrollView horizontal={true} style={{position:"relative",zIndex:-10}} >
       <View style={styles.container} >
         <ImageBackground source={Interview1} resizeMode='contain' style={styles.main}>
@@ -76,10 +76,11 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: "row",
     marginLeft:pixelSizeVertical(19),
+    paddingTop:28
   },
   meeting: {
     position: "relative",
-    top: -15,
+    top: -17,
     left:7,
     zIndex:10
   },

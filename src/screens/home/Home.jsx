@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View, Button, SafeAreaView,ScrollView } from 'react-native'
+import { StyleSheet, Text, View, Button, SafeAreaView,ScrollView, Image } from 'react-native'
 import React from 'react'
 import RightArrow from '../../assets/images/rightArrow.svg'
 import InterviewStart from '../../components/InterviewStart'
 import Interview from '../../components/Interview'
 import ratio from '../../style/consts/ratio'
+import Plus from "../../assets/images/NavigationPlus.png"
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
