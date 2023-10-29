@@ -29,7 +29,7 @@ const Home = ({ navigation }) => {
        <View><Text style={styles.last}>Interview by Category</Text></View>
        <View style={{flexDirection:"row",alignItems:"center",gap:3}}><Text style={styles.details}>More</Text><RightArrow/></View>
       </View>
-      <View style={{flexDirection:"row", marginBottom:pixelSizeVertical(60)}}>
+      <View style={{flexDirection:"row", marginBottom:pixelSizeVertical(58)}}>
         <View style={{marginLeft:20,marginTop:13,flexDirection:"row"}}>
         <Text style={styles.cat}></Text>
         <Text style={styles.cat}></Text>
