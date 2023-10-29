@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../screens/home/Home';
@@ -7,17 +7,33 @@ import Lightbulb from 'react-native-vector-icons/Foundation';
 import Setting1 from "react-native-vector-icons/AntDesign"
 import Dashboard from "react-native-vector-icons/MaterialCommunityIcons"
 import PieChart from "react-native-vector-icons/AntDesign"
+import Plus from "../assets/images/NavigationPlus.png"
+
 
 
 
 const Navigation = () => {
   const Tab = createBottomTabNavigator();
+
+  const CustomTabBarButton = ({children,onPress})=>{
+    <TouchableOpacity 
+      style={{
+        top:-50,
+        justifyContent:"center",
+        alignItems:"center"
+      }}
+    >
+      <View style={{
+        width:70
+      }}>{children}</View>
+    </TouchableOpacity>
+  }
   return (
     <Tab.Navigator screenOptions={
       {
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: { backgroundColor: '#rgba(255, 247, 239, 1)' },
+        tabBarStyle: { backgroundColor: '#rgba(255, 247, 239, 1)',height:70, shadowOffset: -10, shadowColor:"rgba(92, 108, 156, 0.10)" },
         tabBarActiveTintColor: '#000000',
       }
     }>
@@ -32,6 +48,20 @@ const Navigation = () => {
           const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
           return <Lightbulb name="lightbulb" size={30} color={lightbulb} />;
         },
+      })} />
+      <Tab.Screen name="Articles2" component={Articles}  options={() => ({
+        tabBarIcon: ({ focused}) => (
+            <Image
+            source={Plus}
+            resizeMode='contain'
+            style={{
+              top:-33,
+              backgroundColor:"transparent",
+              borderRadius:0
+            }}
+            />
+        ),
+  
       })} />
       <Tab.Screen name="Home1" component={Home} options={() => ({
         tabBarIcon: ({ focused}) => {

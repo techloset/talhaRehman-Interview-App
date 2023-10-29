@@ -84,6 +84,6 @@ const styles = StyleSheet.create({
         marginTop:37,
         margin:"auto",
         alignSelf:"center",
-        marginBottom:25
+        marginBottom:55
     }
 })

@@ -4,7 +4,6 @@ import RightArrow from '../../assets/images/rightArrow.svg'
 import InterviewStart from '../../components/InterviewStart'
 import Interview from '../../components/Interview'
 import ratio from '../../style/consts/ratio'
-import Plus from "../../assets/images/NavigationPlus.png"
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -30,7 +29,7 @@ const Home = ({ navigation }) => {
        <View><Text style={styles.last}>Interview by Category</Text></View>
        <View style={{flexDirection:"row",alignItems:"center",gap:3}}><Text style={styles.details}>More</Text><RightArrow/></View>
       </View>
-      <View style={{flexDirection:"row", marginBottom:pixelSizeVertical(40)}}>
+      <View style={{flexDirection:"row", marginBottom:pixelSizeVertical(60)}}>
         <View style={{marginLeft:20,marginTop:13,flexDirection:"row"}}>
         <Text style={styles.cat}></Text>
         <Text style={styles.cat}></Text>
