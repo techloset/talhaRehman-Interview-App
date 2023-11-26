@@ -5,11 +5,12 @@ import Left from "../../assets/images/LeftArrow.svg"
 import LeftOrange from "../../assets/images/LeftOrange.svg"
 import Video from '../../components/Video'
 import Result from '../../components/Result'
+import { Color, FontFamily } from '../../style/consts/GlobalStyles'
 
 const Analytics = ({navigation}) => {
   return (
     <SafeAreaView style={styles.container}>
-        <ScrollView>
+        <ScrollView showsVerticalScrollIndicator={false}>
         <View style={{flexDirection:"row", alignItems:"center", marginTop:39, marginLeft:18 }}>
             <Left onPress={() => navigation.navigate('Home')}/>
             <Text style={styles.analytics}>Analytics</Text>
@@ -44,34 +45,34 @@ const styles = StyleSheet.create({
         flex:1
     },
     analytics:{
-        color:"#013551",
-        fontFamily:"Poppins-SemiBold",
+        color: Color.darkBlue,
+        fontFamily: FontFamily.poppinsSemiBold,
         fontSize:22,
         marginLeft:"27%"
     },
     job:{
-        color:"#F17720",
+        color: Color.primary,
         fontSize:18,
-        fontFamily:"Poppins-SemiBold",
+        fontFamily: FontFamily.poppinsSemiBold,
     },
     weekness:{
-        color:"#000",
+        color: Color.white,
         fontSize:14,
-        fontFamily:"Poppins-SemiBold",
+        fontFamily: FontFamily.poppinsSemiBold,
         marginTop:4,
         marginLeft:17
     },
     video:{
-        color:"#2B2C46",
+        color: Color.darkGray,
         fontSize:18,
-        fontFamily:"Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         marginLeft:13,
         marginTop:22
     },
     result:{
-        color:"#2B2C46",
+        color: Color.darkGray,
         fontSize:18,
-        fontFamily:"Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         marginTop:23,
         marginLeft:16,
         marginBottom:25

@@ -4,13 +4,15 @@ import RightArrow from '../../assets/images/rightArrow.svg'
 import InterviewStart from '../../components/InterviewStart'
 import Interview from '../../components/Interview'
 import ratio from '../../style/consts/ratio'
+import { Color , FontFamily } from '../../style/consts/GlobalStyles'
+
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
       <View style={{flexDirection:"row",justifyContent:"space-between",marginHorizontal:20, marginTop:35}}>
         <View><Text style={styles.dashboard}>Dashboard</Text></View>
         <View><Text style={styles.tem}>30 C</Text></View>
@@ -31,15 +33,15 @@ const Home = ({ navigation }) => {
       </View>
       <View style={{flexDirection:"row", marginBottom:pixelSizeVertical(58)}}>
         <View style={{marginLeft:20,marginTop:13,flexDirection:"row"}}>
-        <Text style={styles.cat}></Text>
-        <Text style={styles.cat}></Text>
-        <Text style={styles.cat}></Text>
-        <Text style={styles.cat}></Text>
+        <View style={styles.cat}></View>
+        <View style={styles.cat}></View>
+        <View style={styles.cat}></View>
+        <View style={styles.cat}></View>
         </View>
       </View>
       </ScrollView>
     </SafeAreaView>
-  
+   
   )
 }
 
@@ -50,28 +52,28 @@ const styles = StyleSheet.create({
     flex:1
   },
   dashboard: {
-    color: "#4A4E57",
-    fontFamily: "Poppins-Medium",
+    color: Color.lightGrey,
+    fontFamily: FontFamily.poppinsMedium,
     fontSize: 22
   },
   tem: {
-    color: "#F17720",
+    color: Color.primary,
     fontSize: 16,
-    fontFamily: "Poppins-SemiBold"
+    fontFamily: FontFamily.poppinsSemiBold
   },
   last:{
-    color:"#2B2C46",
-    fontFamily:"Poppins-Medium",
+    color: Color.darkGray,
+    fontFamily: FontFamily.poppinsMedium,
     fontSize: 16,
   },
   details:{
-    color:"#666775",
+    color: Color.grey,
     fontSize:14,
   },
   cat:{
     width:ratio.widthPixel(100),
     height:ratio.widthPixel(50),
     marginRight:15,
-    backgroundColor:"white"
+    backgroundColor: Color.white
   }
 })

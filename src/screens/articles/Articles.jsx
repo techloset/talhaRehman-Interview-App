@@ -7,13 +7,14 @@ import Article from "../../assets/images/Article.svg"
 import Application from "../../assets/images/Application.svg"
 import ArticlesSlider from '../../components/ArticlesSlider'
 import ratio from '../../style/consts/ratio'
+import { Color, FontFamily } from '../../style/consts/GlobalStyles'
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 
 const Articles = ({ navigation }) => {
     return (
         <SafeAreaView>
-            <ScrollView>
+            <ScrollView showsVerticalScrollIndicator={false}>
             <View style={{flexDirection:"row", alignItems:"center", marginTop:34, marginLeft:18 }}>
                 <Left onPress={() => navigation.navigate('Home')} />
                 <Text style={styles.articles}>Articles</Text>
@@ -51,13 +52,13 @@ const styles = StyleSheet.create({
     articles:{
         color:"#013551",
         fontSize:22,
-        fontFamily:"Poppins-SemiBold",
+        fontFamily: FontFamily.poppinsSemiBold,
         marginLeft:pixelSizeVertical(11)
     },
     articlesPage:{
         color:"#47515C",
         fontSize:14,
-        fontFamily:"Poppins-Medium",
+        fontFamily:FontFamily.poppinsMedium,
         marginLeft:pixelSizeVertical(28)
     },
     main:{
@@ -74,18 +75,16 @@ const styles = StyleSheet.create({
         marginTop:55
     },
     text1:{
-        color:"rgba(241, 119, 32, 1)",
+        color: Color.primary,
         fontSize:14,
-        fontFamily:"Poppins-Medium",
+        fontFamily:FontFamily.poppinsMedium,
         marginTop:3,
-        // marginBottom:21
     },
     text2:{
-        color:"rgba(1, 53, 81, 1)",
+        color: Color.darkBlue,
         fontSize:14,
-        fontFamily:"Poppins-Medium",
+        fontFamily:FontFamily.poppinsMedium,
         marginTop:3,
-        // marginBottom:21
     },
     topRow1:{
         alignItems:"center",

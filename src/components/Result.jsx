@@ -5,6 +5,7 @@ import blue from "../assets/images/blueProgress.png"
 import orange from "../assets/images/orangeProgress.png"
 import purple from "../assets/images/purpleProgress.png"
 import { responsiveWidth } from 'react-native-responsive-dimensions'
+import { Color, FontFamily } from '../style/consts/GlobalStyles'
 
 
 const Result = () => {
@@ -108,45 +109,45 @@ const styles = StyleSheet.create({
     greenInner:{
         color:"#3BB13A",
         fontSize:14,
-        fontFamily:"Poppins-SemiBold"
+        fontFamily: FontFamily.poppinsSemiBold,
     },
     gexpression:{
         color:"#3BB13A",
         fontSize:10,
-        fontFamily:"Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"
     },
     blueInner:{
         color:"#4449D5",
         fontSize:14,
-        fontFamily:"Poppins-SemiBold"
+        fontFamily: FontFamily.poppinsSemiBold,
     },
     bexpression:{
         color:"#4449D5",
         fontSize:10,
-        fontFamily:"Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"
     },
     orangeInner:{
         color:"#F17720",
         fontSize:14,
-        fontFamily:"Poppins-SemiBold"
+        fontFamily: FontFamily.poppinsSemiBold,
     },
     oexpression:{
-        color:"#F17720",
+        color: Color.primary,
         fontSize:10,
-        fontFamily:"Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"
     },
     purpleInner:{
         color:"#DD52D7",
         fontSize:14,
-        fontFamily:"Poppins-SemiBold"
+        fontFamily: FontFamily.poppinsSemiBold,
     },
     pexpression:{
         color:"#DD52D7",
         fontSize:10,
-        fontFamily:"Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"
     },
 })

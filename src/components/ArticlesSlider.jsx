@@ -2,12 +2,13 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Frame1 from "../assets/images/Frame1.svg"
 import PaginationPic from "../assets/images/Pagination.svg"
+import { Color, FontFamily } from '../style/consts/GlobalStyles'
 
 const ArticlesSlider = () => {
     return (
         <View>
 
-            <ScrollView horizontal={true}>
+            <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}>
                 <View style={styles.container}>
                     <View style={styles.main}>
                         <Text style={styles.frame}><Frame1/></Text>
@@ -54,15 +55,15 @@ const styles = StyleSheet.create({
 
     },
     heading: {
-        color: 'rgba(1, 53, 81, 1)',
+        color: Color.darkBlue,
         fontSize: 16,
-        fontFamily: "Poppins-SemiBold",
+        fontFamily: FontFamily.poppinsSemiBold,
         marginLeft:21
     },
     para:{
-        color:"rgba(1, 53, 81, 1)",
+        color: Color.darkBlue,
         fontSize:13,
-        fontFamily:"Poppins-Regular",
+        fontFamily: FontFamily.poppinsRegular,
         marginLeft:21,
         width:"86%",
         lineHeight:22,

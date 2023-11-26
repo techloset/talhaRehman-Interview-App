@@ -1,109 +1,79 @@
-import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native'
-import React from 'react'
-import Interview1 from "../assets/images/Interview1.png"
-import Interview2 from "../assets/images/Interview2.png"
-import Interview3 from "../assets/images/Interview3.png"
-import Interview4 from "../assets/images/Interview4.png"
-import Meeting1 from "../assets/images/Meeting1.svg"
-import Meeting2 from "../assets/images/Meeting2.svg"
-import Meeting3 from "../assets/images/Meeting3.svg"
-import Meeting4 from "../assets/images/Meeting4.svg"
-import ratio from '../style/consts/ratio'
+import React from 'react';
+import { StyleSheet, Text, View, ImageBackground, ScrollView } from 'react-native';
+import Meeting1 from "../assets/images/Meeting1.svg";
+import Meeting2 from "../assets/images/Meeting2.svg";
+import Meeting3 from "../assets/images/Meeting3.svg";
+import Meeting4 from "../assets/images/Meeting4.svg";
+import ratio from '../style/consts/ratio';
+import { Color, FontFamily } from '../style/consts/GlobalStyles';
 
-const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
+const { widthPixel, fontPixel, pixelSizeVertical } = ratio;
+
+const interviewsData = [
+  { image: require("../assets/images/Interview1.png"), meeting: <Meeting1 />, heading: "Interview 1", para: "Lorem Ipsum Doller sit amet Recommended", time: "5 min" },
+  { image: require("../assets/images/Interview2.png"), meeting: <Meeting2 />, heading: "Interview 2", para: "Lorem Ipsum Doller sit amet Recommended", time: "10 min" },
+  { image: require("../assets/images/Interview3.png"), meeting: <Meeting3 />, heading: "Interview 3", para: "Lorem Ipsum Doller sit amet Recommended", time: "7 min" },
+  { image: require("../assets/images/Interview4.png"), meeting: <Meeting4 />, heading: "Interview 4", para: "Lorem Ipsum Doller sit amet Recommended", time: "7 min" },
+  { image: require("../assets/images/Interview1.png"), meeting: <Meeting1 />, heading: "Interview 5", para: "Lorem Ipsum Doller sit amet Recommended", time: "5 min" },
+];
 
 const Interview = () => {
   return (
-
-    <View >
-      <ScrollView horizontal={true} style={{position:"relative",zIndex:-10}} >
-      <View style={styles.container} >
-        <ImageBackground source={Interview1} resizeMode='contain' style={styles.main}>
-          <Text style={styles.meeting}> <Meeting1/></Text>
-          <Text style={styles.heading}>Interview 1</Text>
-          <Text style={styles.para}>Lorem Ipsum
-            Doller sit amet
-            Recommended</Text>
-            <Text style={styles.time}>5 min</Text>
-        </ImageBackground>
-        <ImageBackground source={Interview2} resizeMode='contain' style={styles.main}>
-          <Text style={styles.meeting}> <Meeting2/></Text>
-          <Text style={styles.heading}>Interview 2</Text>
-          <Text style={styles.para}>Lorem Ipsum
-            Doller sit amet
-            Recommended</Text>
-            <Text style={styles.time}>10 min</Text>
-        </ImageBackground>
-        <ImageBackground source={Interview3} resizeMode='contain' style={styles.main}>
-          <Text style={styles.meeting}> <Meeting3/></Text>
-          <Text style={styles.heading}>Interview 3</Text>
-          <Text style={styles.para}>Lorem Ipsum
-            Doller sit amet
-            Recommended</Text>
-            <Text style={styles.time}>7 min</Text>
-        </ImageBackground>
-        <ImageBackground source={Interview4} resizeMode='contain' style={styles.main}>
-          <Text style={styles.meeting}> <Meeting4/></Text>
-          <Text style={styles.heading}>Interview 4</Text>
-          <Text style={styles.para}>Lorem Ipsum
-            Doller sit amet
-            Recommended</Text>
-            <Text style={styles.time}>7 min</Text>
-        </ImageBackground>
-        <ImageBackground source={Interview1} resizeMode='contain' style={styles.main}>
-          <Text style={styles.meeting}> <Meeting1/></Text>
-          <Text style={styles.heading}>Interview 5</Text>
-          <Text style={styles.para}>Lorem Ipsum
-            Doller sit amet
-            Recommended</Text>
-            <Text style={styles.time}>5 min</Text>
-        </ImageBackground>
-      </View>
+    <View>
+      <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={{ position: "relative", zIndex: -10 }} >
+        <View style={styles.container} >
+          {interviewsData.map((interview, index) => (
+            <ImageBackground key={index} source={interview.image} resizeMode='contain' style={styles.main}>
+              <Text style={styles.meeting}>{interview.meeting}</Text>
+              <Text style={styles.heading}>{interview.heading}</Text>
+              <Text style={styles.para}>{interview.para}</Text>
+              <Text style={styles.time}>{interview.time}</Text>
+            </ImageBackground>
+          ))}
+        </View>
       </ScrollView>
     </View>
-  )
-}
+  );
+};
 
-export default Interview
+export default Interview;
 
 const styles = StyleSheet.create({
   main: {
     height: 154,
     width: 100,
-    marginRight:pixelSizeVertical(20)
-
+    marginRight: pixelSizeVertical(20)
   },
   container: {
     flexDirection: "row",
-    marginLeft:pixelSizeVertical(19),
-    paddingTop:28
+    marginLeft: pixelSizeVertical(19),
+    paddingTop: 28
   },
   meeting: {
     position: "relative",
     top: -17,
-    left:7,
-    zIndex:10
+    left: 7,
+    zIndex: 10
   },
   heading: {
-    color: "white",
-    fontSize:fontPixel(12),
-    fontFamily:"Poppins-SemiBold",
-    left:9
+    color: Color.white,
+    fontSize: fontPixel(12),
+    fontFamily: FontFamily.poppinsSemiBold,
+    left: 9
   },
-  para:{
-    fontSize:fontPixel(9),
-    fontFamily:"Poppins-Medium",
-    lineHeight:12,
-    color: "white",
-    left:pixelSizeVertical(9),
-    top:pixelSizeVertical(7)
-
+  para: {
+    fontSize: fontPixel(9),
+    fontFamily: "Poppins-Medium",
+    lineHeight: 12,
+    color: Color.white,
+    left: pixelSizeVertical(9),
+    top: pixelSizeVertical(7)
   },
-  time:{
-    color: "white",
-    fontSize:fontPixel(16),
-    fontFamily:"Poppins-SemiBold",
-    top:pixelSizeVertical(11),
-    left:pixelSizeVertical(25)
+  time: {
+    color: Color.white,
+    fontSize: fontPixel(16),
+    fontFamily: "Poppins-SemiBold",
+    top: pixelSizeVertical(11),
+    left: pixelSizeVertical(25)
   }
-})
+});

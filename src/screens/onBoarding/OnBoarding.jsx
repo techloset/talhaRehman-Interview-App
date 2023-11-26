@@ -3,11 +3,9 @@ import React from 'react'
 import Logo from '../../assets/images/logo.svg'
 import Yellow from '../../assets/images/YellowBackground.png'
 import Tabel from '../../assets/images/TalkingTabel.png'
-import BottomYellow from '../../assets/images/BottomYellow.png'
 import { useNavigation } from '@react-navigation/native'
 import ratio from '../../style/consts/ratio'
-
-// import { responsiveFontSize,responsiveHeight,responsiveWidth,responsiveScreenHeight,responsiveScreenWidth } from 'react-native-responsive-dimensions'
+import { Color } from '../../style/consts/GlobalStyles'
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const OnBoarding = () => {
@@ -31,7 +29,7 @@ const OnBoarding = () => {
               <Text style={styles.buttonText}>GET STARTED</Text>
             </TouchableOpacity>
           </View>
-
+ 
       </View>
     </ImageBackground>
    </SafeAreaView>
@@ -50,7 +48,7 @@ const styles = StyleSheet.create({
     alignItems:"center"
   },
   buttonText:{
-    color:"#FFFFFF",
+    color: Color.white,
     fontSize:fontPixel(14),
     fontFamily: 'Poppins-SemiBold'
   },
@@ -59,24 +57,21 @@ const styles = StyleSheet.create({
     marginTop:pixelSizeVertical(100)
   },
   text:{
-    color:"#3B4A58",
+    color: Color.secondary,
     fontFamily: 'Poppins-Medium',
     fontSize:ratio.fontPixel(14),
     width:pixelSizeVertical(359),
   },
 tableContainer:{
-  // justifyContent: 'center',
   alignItems: 'center',
   marginTop:pixelSizeVertical(120),
   width:widthPixel(390),
   alignSelf:'center'
-  // paddingHorizontal:pixelSizeVertical(150)
 },
 tableImg:{
   width:'100%',
 },
 logoContainer:{
-  // justifyContent: 'center',
   alignItems: 'center',
   marginTop:pixelSizeVertical(50)
 },

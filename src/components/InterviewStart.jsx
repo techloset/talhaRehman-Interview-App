@@ -9,6 +9,7 @@ import Label6 from "../assets/images/YellowLabel6.svg"
 import Label7 from "../assets/images/YellowLabel7.svg"
 import Label8 from "../assets/images/YellowLabel8.svg"
 import ratio from '../style/consts/ratio'
+import { Color , FontFamily } from '../style/consts/GlobalStyles'
 
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
@@ -38,24 +39,24 @@ export default InterviewStart
 
 const styles = StyleSheet.create({
     first: {
-        color: "#4A4E57",
+        color: Color.lightGrey,
         textAlign: "center",
         fontSize: 18,
-        fontFamily: "Poppins-Medium",
+        fontFamily: FontFamily.poppinsMedium,
         lineHeight: 24,
         width: "60%",
         marginTop:pixelSizeVertical(24)
     },
     buttonText:{
-        color:"#FFFFFF",
+        color: Color.white,
         fontSize:14,
-        fontFamily: 'Poppins-SemiBold'
+        fontFamily: FontFamily.poppinsSemiBold
       },
     button:{
         width:142,
         height:47,
         borderRadius:3,
-        backgroundColor:"#F17720",
+        backgroundColor: Color.primary,
         justifyContent:"center",
         alignItems:"center"
       },
