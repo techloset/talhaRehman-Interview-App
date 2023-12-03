@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View,Image } from 'react-native';
+import { TouchableOpacity, View, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from '../screens/home/Home';
 import Articles from '../screens/articles/Articles';
@@ -28,6 +28,14 @@ const Navigation = () => {
     );
   };
 
+  const screenData = [
+    { name: 'Home', component: Home, icon: 'view-dashboard', iconComponent: Dashboard },
+    { name: 'Articles', component: Articles, icon: 'lightbulb', iconComponent: Lightbulb },
+    { name: 'Articles2', component: Articles, icon: Plus, iconComponent: 'Image' },
+    { name: 'Home1', component: Home, icon: 'piechart', iconComponent: PieChart },
+    { name: 'Articles1', component: Articles, icon: 'setting', iconComponent: Setting1 },
+  ];
+
   return (
     <Tab.Navigator
       screenOptions={{
@@ -37,43 +45,33 @@ const Navigation = () => {
         tabBarActiveTintColor: '#000000',
       }}
     >
-      <Tab.Screen name="Home" component={Home} options={() => ({
-        tabBarIcon: ({ focused }) => {
-          const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
-          return <Dashboard name="view-dashboard" size={30} color={lightbulb} />;
-        },
-      })} />
-      <Tab.Screen name="Articles" component={Articles} options={() => ({
-        tabBarIcon: ({ focused }) => {
-          const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
-          return <Lightbulb name="lightbulb" size={30} color={lightbulb} />;
-        },
-      })} />
-      <Tab.Screen name="Articles2" component={Articles} options={() => ({
-        tabBarIcon: ({ focused }) => (
-          <Image
-            source={Plus}
-            resizeMode='contain'
-            style={{
-              top: -33,
-              backgroundColor: 'transparent',
-              borderRadius: 0
-            }}
-          />
-        ),
-      })} />
-      <Tab.Screen name="Home1" component={Home} options={() => ({
-        tabBarIcon: ({ focused }) => {
-          const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
-          return <PieChart name="piechart" size={30} color={lightbulb} />;
-        },
-      })} />
-      <Tab.Screen name="Articles1" component={Articles} options={() => ({
-        tabBarIcon: ({ focused }) => {
-          const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
-          return <Setting1 name="setting" size={30} color={lightbulb} />;
-        },
-      })} />
+      {screenData.map(({ name, component, icon, iconComponent }, index) => (
+        <Tab.Screen
+          key={index}
+          name={name}
+          component={component}
+          options={() => ({
+            tabBarIcon: ({ focused }) => {
+              const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
+              const size = 30;
+              if (typeof iconComponent === 'string' && iconComponent === 'Image') {
+                return (
+                  <Image
+                    source={icon}
+                    resizeMode='contain'
+                    style={{
+                      top: -33,
+                      backgroundColor: 'transparent',
+                      borderRadius: 0
+                    }}
+                  />
+                );
+              }
+              return React.createElement(iconComponent, { name: icon, size, color: lightbulb });
+            },
+          })}
+        />
+      ))}
     </Tab.Navigator>
   );
 };
