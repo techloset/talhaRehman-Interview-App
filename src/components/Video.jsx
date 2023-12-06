@@ -2,6 +2,7 @@ import { StyleSheet, Text, View,ImageBackground,TouchableOpacity } from 'react-n
 import React from 'react'
 import VideoBg from "../assets/images/VideoBg.png"
 import PlayButton from "../assets/images/PlayButton.svg"
+import { Color, FontFamily } from '../style/consts/GlobalStyles'
 
 const Video = ({navigation}) => {
   return (
@@ -40,42 +41,42 @@ const styles = StyleSheet.create({
         width:96,
         height:34,
         borderRadius:5,
-        backgroundColor:"#FBE0CA",
+        backgroundColor: Color.lightFullOrange,
         justifyContent:"center",
         alignItems:"center",
     },
     cancel:{
-        color:"#F17720",
+        color: Color.primary,
         fontSize:14,
-        fontFamily:"PoppinsBold",
+        fontFamily: FontFamily.poppinsBold,
        
     },
     nextBtn:{
         width:96,
         height:34,
         borderRadius:5,
-        backgroundColor:"#F17720",
+        backgroundColor: Color.primary,
         justifyContent:"center",
         alignItems:"center",
     },
     next:{
-        color:"#FFFFFF",
+        color: Color.white,
         fontSize:14,
-        fontFamily:"PoppinsBold",
+        fontFamily:FontFamily.poppinsBold,
        
     },
     retryBtn:{
         width:96,
         height:34,
         borderRadius:5,
-        backgroundColor:"#F4B733",
+        backgroundColor: Color.lightOrange,
         justifyContent:"center",
         alignItems:"center",
     },
     retry:{
-        color:"#FFFFFF",
+        color: Color.white,
         fontSize:14,
-        fontFamily:"PoppinsBold",
+        fontFamily:FontFamily.poppinsBold,
        
     },
 

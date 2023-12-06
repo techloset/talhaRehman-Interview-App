@@ -16,12 +16,12 @@ const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 const InterviewStart = ({navigation}) => {
     return (
         <View style={{ borderRadius: 5, marginHorizontal: pixelSizeVertical(20), marginTop: 18, backgroundColor: "#FFFFFF", justifyContent: "center", height: 250, alignItems: "center" }}>
-            <Label1 style={styles.label1}/>
-            <Label2 style={styles.label2}/>
-            <Label3 style={styles.label3}/>
-            <Label4 style={styles.label4}/>
-            <Label5 style={styles.label5}/>
-            <Label6 style={styles.label6}/>
+            <Label1 style={styles.label1} width="95"> </Label1>
+            <Label1 style={styles.label2} width="60"/>
+            <Label1 style={styles.label3} white="104"/>
+            <Label1 style={styles.label4} white="71"/>
+            <Label1 style={styles.label5} white="54"/>
+            <Label6 style={styles.label6} />
             <Label7 style={styles.label7}/>
             <Label8 style={styles.label8}/>
             <Text style={styles.first}>Try Your First Interview

@@ -107,29 +107,29 @@ const styles = StyleSheet.create({
         alignItems:"center",
     },
     greenInner:{
-        color:"#3BB13A",
+        color: Color.green,
         fontSize:14,
         fontFamily: FontFamily.poppinsSemiBold,
     },
     gexpression:{
-        color:"#3BB13A",
+        color: Color.green,
         fontSize:10,
         fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"
     },
     blueInner:{
-        color:"#4449D5",
+        color: Color.blue,
         fontSize:14,
         fontFamily: FontFamily.poppinsSemiBold,
     },
     bexpression:{
-        color:"#4449D5",
+        color: Color.blue,
         fontSize:10,
         fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"
     },
     orangeInner:{
-        color:"#F17720",
+        color: Color.primary,
         fontSize:14,
         fontFamily: FontFamily.poppinsSemiBold,
     },
@@ -140,12 +140,12 @@ const styles = StyleSheet.create({
         textAlign:"center"
     },
     purpleInner:{
-        color:"#DD52D7",
+        color: Color.darkPink,
         fontSize:14,
         fontFamily: FontFamily.poppinsSemiBold,
     },
     pexpression:{
-        color:"#DD52D7",
+        color: Color.darkPink,
         fontSize:10,
         fontFamily: FontFamily.poppinsMedium,
         textAlign:"center"

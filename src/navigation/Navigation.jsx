@@ -8,6 +8,7 @@ import Setting1 from 'react-native-vector-icons/AntDesign';
 import Dashboard from 'react-native-vector-icons/MaterialCommunityIcons';
 import PieChart from 'react-native-vector-icons/AntDesign';
 import Plus from '../assets/images/NavigationPlus.png';
+import { Color } from '../style/consts/GlobalStyles';
 
 const Navigation = () => {
   const Tab = createBottomTabNavigator();
@@ -41,8 +42,8 @@ const Navigation = () => {
       screenOptions={{
         headerShown: false,
         tabBarShowLabel: false,
-        tabBarStyle: { backgroundColor: '#rgba(255, 247, 239, 1)', height: 70, shadowOffset: -10, shadowColor: 'rgba(92, 108, 156, 0.10)' },
-        tabBarActiveTintColor: '#000000',
+        tabBarStyle: { backgroundColor: Color.Tab, height: 70, shadowOffset: -10, shadowColor: 'rgba(92, 108, 156, 0.10)' },
+        tabBarActiveTintColor: Color.black,
       }}
     >
       {screenData.map(({ name, component, icon, iconComponent }, index) => (
@@ -52,7 +53,7 @@ const Navigation = () => {
           component={component}
           options={() => ({
             tabBarIcon: ({ focused }) => {
-              const lightbulb = focused ? 'rgba(251, 124, 0, 1)' : 'rgba(251, 124, 0, 0.52)';
+              const lightbulb = focused ? Color.tabColor : 'rgba(251, 124, 0, 0.52)';
               const size = 30;
               if (typeof iconComponent === 'string' && iconComponent === 'Image') {
                 return (

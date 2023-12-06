@@ -52,14 +52,14 @@ const ArticlesSlider = () => {
                                 height: 12,
                                 borderRadius: 5,
                                 marginHorizontal: 0,
-                                backgroundColor: 'rgba(241, 119, 32, 1)',
+                                backgroundColor: Color.primary, 
                             }}
                             inactiveDotStyle={{
                                 width: 12,
                                 height: 12,
                                 borderRadius: 5,
                                 marginHorizontal: 0,
-                                backgroundColor: 'rgba(227, 227, 227, 1)',
+                                backgroundColor: Color.grey89,
                             }}
                             inactiveDotOpacity={1}
                             inactiveDotScale={1}
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     main: {
         width: 283,
         height: 407,
-        backgroundColor: "rgba(255, 211, 193, 1), rgba(254, 199, 179, 1)",
+        backgroundColor: Color.orange,
         marginTop: 92,
         marginRight: 30
 
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
     main2: {
         width: 283,
         height: 407,
-        backgroundColor: "rgba(251, 229, 231, 1), rgba(245, 203, 204, 1)",
+        backgroundColor: Color.lightPink,
         marginTop: 92,
         marginRight: 30
 

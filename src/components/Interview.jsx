@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
   },
   para: {
     fontSize: fontPixel(9),
-    fontFamily: "Poppins-Medium",
+    fontFamily: FontFamily.poppinsMedium,
     lineHeight: 12,
     color: Color.white,
     left: pixelSizeVertical(9),
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   time: {
     color: Color.white,
     fontSize: fontPixel(16),
-    fontFamily: "Poppins-SemiBold",
+    fontFamily: FontFamily.poppinsSemiBold,
     top: pixelSizeVertical(11),
     left: pixelSizeVertical(25)
   }
