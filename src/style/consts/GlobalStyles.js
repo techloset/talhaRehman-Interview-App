@@ -18,7 +18,9 @@ export const Color ={
     lightFullOrange:"#FBE0CA",
     Tab:"#FFF7EF",
     black:"#000000",
-    tabColor:"#FB7C00"
+    tabColor:"#FB7C00",
+    pageColor:"#47515c",
+    pageLightColor:"#FFF2EB"
 
 }
 

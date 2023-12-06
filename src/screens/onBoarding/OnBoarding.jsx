@@ -5,7 +5,7 @@ import Yellow from '../../assets/images/YellowBackground.png'
 import Tabel from '../../assets/images/TalkingTabel.png'
 import { useNavigation } from '@react-navigation/native'
 import ratio from '../../style/consts/ratio'
-import { Color } from '../../style/consts/GlobalStyles'
+import { Color, FontFamily } from '../../style/consts/GlobalStyles'
 const {widthPixel, fontPixel, pixelSizeVertical} = ratio;
 
 const OnBoarding = () => {
@@ -43,14 +43,14 @@ const styles = StyleSheet.create({
     width:widthPixel(212),
     height:widthPixel(47),
     borderRadius:widthPixel(3),
-    backgroundColor:"#F17720",
+    backgroundColor: Color.primary,
     justifyContent:"center",
     alignItems:"center"
   },
   buttonText:{
     color: Color.white,
     fontSize:fontPixel(14),
-    fontFamily: 'Poppins-SemiBold'
+    fontFamily: FontFamily.poppinsSemiBold
   },
   textContainer:{
     alignItems:"center",
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
   },
   text:{
     color: Color.secondary,
-    fontFamily: 'Poppins-Medium',
+    fontFamily: FontFamily.poppinsMedium,
     fontSize:ratio.fontPixel(14),
     width:pixelSizeVertical(359),
   },

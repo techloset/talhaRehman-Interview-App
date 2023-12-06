@@ -1,13 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import Label1 from "../assets/images/YellowLabel1.svg"
-import Label2 from "../assets/images/YellowLabel2.svg"
-import Label3 from "../assets/images/YellowLabel3.svg"
-import Label4 from "../assets/images/YellowLabel4.svg"
-import Label5 from "../assets/images/YellowLabel5.svg"
-import Label6 from "../assets/images/YellowLabel6.svg"
-import Label7 from "../assets/images/YellowLabel7.svg"
-import Label8 from "../assets/images/YellowLabel8.svg"
 import ratio from '../style/consts/ratio'
 import { Color , FontFamily } from '../style/consts/GlobalStyles'
 
@@ -18,12 +11,12 @@ const InterviewStart = ({navigation}) => {
         <View style={{ borderRadius: 5, marginHorizontal: pixelSizeVertical(20), marginTop: 18, backgroundColor: "#FFFFFF", justifyContent: "center", height: 250, alignItems: "center" }}>
             <Label1 style={styles.label1} width="95"> </Label1>
             <Label1 style={styles.label2} width="60"/>
-            <Label1 style={styles.label3} white="104"/>
-            <Label1 style={styles.label4} white="71"/>
-            <Label1 style={styles.label5} white="54"/>
-            <Label6 style={styles.label6} />
-            <Label7 style={styles.label7}/>
-            <Label8 style={styles.label8}/>
+            <Label1 style={styles.label3} width="104"/>
+            <Label1 style={styles.label4} width="71"/>
+            <Label1 style={styles.label5} width="54"/>
+            <Label1 style={styles.label6} width="50"/>
+            <Label1 style={styles.label7} width="54"/>
+            <Label1 style={styles.label8} width="95"/>
             <Text style={styles.first}>Try Your First Interview
                 for free</Text>
                 <View style={{marginTop:29}}>

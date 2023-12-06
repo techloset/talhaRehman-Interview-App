@@ -50,13 +50,13 @@ export default Articles
 
 const styles = StyleSheet.create({
     articles:{
-        color:"#013551",
+        color: Color.darkBlue,
         fontSize:22,
         fontFamily: FontFamily.poppinsSemiBold,
         marginLeft:pixelSizeVertical(11)
     },
     articlesPage:{
-        color:"#47515C",
+        color: Color.pageColor,
         fontSize:14,
         fontFamily:FontFamily.poppinsMedium,
         marginLeft:pixelSizeVertical(28)
@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         flexDirection:"row",
         alignItems:"center",
         flexWrap:"wrap",
-        backgroundColor:"#FFF2EB",
+        backgroundColor: Color.pageLightColor,
         marginTop:14,
         gap:pixelSizeVertical(66)
     },
