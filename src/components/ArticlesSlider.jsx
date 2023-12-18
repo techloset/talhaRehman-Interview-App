@@ -4,6 +4,7 @@ import Frame1 from "../assets/images/Frame1.svg"
 import { Color, FontFamily } from '../style/consts/GlobalStyles'
 import Carousel, { Pagination } from 'react-native-snap-carousel';
 import { useState, useRef } from 'react';
+import ratio from '../style/consts/ratio';
 
 const ArticlesSlider = () => {
 
@@ -34,8 +35,8 @@ const ArticlesSlider = () => {
 
     return (
         <View style={styles.container}>
-        <ScrollView showsVerticalScrollIndicator={false}>
-            <SafeAreaView>
+        <ScrollView showsVerticalScrollIndicator={false} >
+            <SafeAreaView >
                 <View>
                     <Carousel
                         layout="default"
@@ -83,20 +84,16 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-
     },
     carouselContentContainer: {
         alignItems: "center",
-    },
-    carouselContainer: {
-       
     },
     main: {
         width: 283,
         height: 407,
         backgroundColor: Color.orange,
         marginTop: 92,
-        marginHorizontal: 40,
+        marginHorizontal: ratio.pixelSizeHorizontal(44), 
     },
     heading: {
         color: Color.darkBlue,
