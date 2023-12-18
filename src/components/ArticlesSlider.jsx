@@ -20,7 +20,7 @@ const ArticlesSlider = () => {
 
     const renderItem = ({ item }) => {
         return (
-            <View style={{ marginLeft: 22, height: 420 }}>
+            <View style={{  height: 420 }}>
 
                 <View style={styles.main}>
                     <Text style={styles.frame}><Frame1 /></Text>
@@ -33,44 +33,45 @@ const ArticlesSlider = () => {
 
 
     return (
-        <View>
-
-            <ScrollView showsVerticalScrollIndicator={false}>
-                <SafeAreaView>
-                    <View>
-                        <Carousel
-                            layout="default"
-                            data={entries}
-                            renderItem={renderItem}
-                            sliderWidth={300}
-                            itemWidth={300}
-                            onSnapToItem={(index) => setActiveSlide(index)}
-                        />
-                        <Pagination
-                            dotsLength={6}
-                            activeDotIndex={activeSlide}
-                            containerStyle={{ paddingVertical: 20 }}
-                            dotStyle={{
-                                width: 12,
-                                height: 12,
-                                borderRadius: 5,
-                                marginHorizontal: 0,
-                                backgroundColor: Color.primary, 
-                            }}
-                            inactiveDotStyle={{
-                                width: 12,
-                                height: 12,
-                                borderRadius: 5,
-                                marginHorizontal: 0,
-                                backgroundColor: Color.grey89,
-                            }}
-                            inactiveDotOpacity={1}
-                            inactiveDotScale={1}
-                        />
-                    </View>
-                </SafeAreaView>
-            </ScrollView>
-        </View>
+        <View style={styles.container}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+            <SafeAreaView>
+                <View>
+                    <Carousel
+                        layout="default"
+                        data={entries}
+                        renderItem={renderItem}
+                        sliderWidth={400}
+                        itemWidth={400}
+                        onSnapToItem={(index) => setActiveSlide(index)}
+                        containerCustomStyle={styles.carouselContainer} // Add this line
+                        contentContainerCustomStyle={styles.carouselContentContainer} // Add this line
+                    />
+                    <Pagination
+                        dotsLength={6}
+                        activeDotIndex={activeSlide}
+                        containerStyle={{ paddingVertical: 20 }}
+                        dotStyle={{
+                            width: 12,
+                            height: 12,
+                            borderRadius: 5,
+                            marginHorizontal: 0,
+                            backgroundColor: Color.primary, 
+                        }}
+                        inactiveDotStyle={{
+                            width: 12,
+                            height: 12,
+                            borderRadius: 5,
+                            marginHorizontal: 0,
+                            backgroundColor: Color.grey89,
+                        }}
+                        inactiveDotOpacity={1}
+                        inactiveDotScale={1}
+                    />
+                </View>
+            </SafeAreaView>
+        </ScrollView>
+    </View>
 
     )
 }
@@ -79,17 +80,23 @@ export default ArticlesSlider
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "row",
-        marginLeft: 20
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
 
+    },
+    carouselContentContainer: {
+        alignItems: "center",
+    },
+    carouselContainer: {
+       
     },
     main: {
         width: 283,
         height: 407,
         backgroundColor: Color.orange,
         marginTop: 92,
-        marginRight: 30
-
+        marginHorizontal: 40,
     },
     heading: {
         color: Color.darkBlue,
@@ -115,7 +122,7 @@ const styles = StyleSheet.create({
         height: 407,
         backgroundColor: Color.lightPink,
         marginTop: 92,
-        marginRight: 30
+        marginRight: 30,
 
     },
     PaginationPic: {
