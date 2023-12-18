@@ -10,6 +10,10 @@ const ArticlesSlider = () => {
     const [entries, setEntries] = useState([
         { title: 'How To work ?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy ' },
         { title: 'How To work ?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy ' },
+        { title: 'How To work ?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy ' },
+        { title: 'How To work ?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy ' },
+        { title: 'How To work ?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy ' },
+        { title: 'How To work ?', text: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy ' },
     ]);
 
     const [activeSlide, setActiveSlide] = useState(0);
@@ -22,7 +26,6 @@ const ArticlesSlider = () => {
                     <Text style={styles.frame}><Frame1 /></Text>
                     <Text style={styles.heading}>{item.title}</Text>
                     <Text style={styles.para}>{item.text} </Text>
-
                 </View>
             </View>
         );
